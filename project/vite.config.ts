@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['lucide-react', 'react-router-dom']
+      external: [] // make sure lucide-react is not here
     }
   }
 });
