@@ -84,7 +84,7 @@ const Hero = () => {
           <div className="w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-br from-primary to-secondary rounded-full relative overflow-hidden shadow-glow ">
             <div className="absolute inset-2 bg-darker rounded-full flex items-center justify-center">
               <img
-                src="/src/my_image.jpg"
+                src="/my_image.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover rounded-full"
               />
