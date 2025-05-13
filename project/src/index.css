@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark text-gray-200 antialiased;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-white;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight;
+  }
+  
+  .subheading {
+    @apply text-xl md:text-2xl font-medium mb-8 text-gray-400;
+  }
+  
+  .button-primary {
+    @apply px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg 
+           font-medium transition-all duration-300 inline-block 
+           transform hover:translate-y-[-2px] hover:shadow-xl focus:outline-none;
+  }
+  
+  .button-secondary {
+    @apply px-6 py-3 bg-transparent border border-gray-600 hover:border-primary 
+           text-gray-300 hover:text-primary rounded-lg font-medium 
+           transition-all duration-300 inline-block;
+  }
+  
+  .card {
+    @apply bg-darker p-6 rounded-xl shadow-lg transform transition-all 
+           duration-500 hover:shadow-xl hover:scale-[1.02];
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 bg-darker border border-gray-700 rounded-lg focus:outline-none 
+           focus:ring-2 focus:ring-primary focus:border-transparent text-white;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.zoom-in {
+  animation: zoomIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Ensures smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
