@@ -4,11 +4,16 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    include: ['lucide-react'], // <-- force pre-bundling
+    include: ['lucide-react', 'react-router-dom'], // Added react-router-dom
   },
   build: {
     rollupOptions: {
-      external: [], // make sure lucide-react is NOT here
+      external: [], // Keep this empty to ensure all dependencies are bundled
+    }
+  },
+  resolve: {
+    alias: {
+      // Add any path aliases if needed
     }
   }
 });
